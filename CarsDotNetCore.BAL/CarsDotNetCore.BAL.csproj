@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CarsDotNetCore.DAL\CarsDotNetCore.DAL.csproj" />
+    <ProjectReference Include="..\CarsDotNetCore.Entity\CarsDotNetCore.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

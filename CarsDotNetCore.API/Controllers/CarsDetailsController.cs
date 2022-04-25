@@ -18,31 +18,31 @@ namespace CarsDotNetCore.API.Controllers
         {
             cars = carsDetails;
         }
-        [HttpPost("Save Cars")]
-        public IActionResult SaveMovie(CarsDetails carsDetails)
+        [HttpPost("SaveCar")]
+        public IActionResult SaveCars(CarsDetails carsDetails)
         {
             return Ok(cars.SaveCars(carsDetails));
         }
 
-        [HttpPost("Delete Car")]
-        public IActionResult DeleteMovie(int CarId)
+        [HttpPost("DeleteCar")]
+        public IActionResult DeleteCars(int CarId)
         {
             return Ok(cars.DeleteCars(CarId));
         }
 
-        [HttpPost("Update Cars")]
-        public IActionResult UpdateMovie(CarsDetails carsDetails)
+        [HttpPost("UpdateCar")]
+        public IActionResult UpdateCars(CarsDetails carsDetails)
         {
             return Ok(cars.UpdateCars(carsDetails));
         }
 
-        [HttpGet("Get Cars")]
-        public IActionResult GetMovie(int CarsId)
+        [HttpGet("GetCar")]
+        public IActionResult GetCars(int CarsId)
         {
             return Ok(cars.GetCars(CarsId));
         }
 
-        [HttpGet("Get All Cars")]
+        [HttpGet("GetAllCars")]
         public List<CarsDetails> GetAllCars()
         {
             return cars.GetAllCars();

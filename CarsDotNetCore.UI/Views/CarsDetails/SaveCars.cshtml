@@ -1,0 +1,61 @@
+﻿@model CarsDotNetCore.Entity.CarsDetails;
+@{
+    ViewData["Title"] = "SaveCars";
+}
+
+<h2>SaveCars</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label>
+            Company Name
+        </label>
+        <input type="text" value=" " asp-for="Company" />
+    </div>
+    <div class="form-group">
+        <label>
+            Model
+        </label>
+        <input type="text" value=" " asp-for="Model" />
+    </div>
+    <div class="form-group">
+        <label>
+            Description
+        </label>
+        <input type="text" value=" " asp-for="Description" />
+    </div>
+    <div class="form-group">
+        <label>
+            Price
+        </label>
+        <input type="text" value=" " asp-for="Price" />
+    </div>
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <input type="reset" value="Reset" class="btn btn-primary" />
+    <hr />
+    <div>
+
+
+        @{
+            if (ViewBag.Status == "OK")
+            {
+                <div class="alert alert-success">
+
+                    @ViewBag.Message
+
+                </div>
+            }
+            else if (ViewBag.Status == "Error")
+            {
+                <div class="alert alert-danger">
+
+                    @ViewBag.Message;
+
+                </div>
+            }
+        }
+        
+    </div>
+}
+
